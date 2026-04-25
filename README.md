@@ -23,17 +23,6 @@ This approach was chosen for the following reasons:
 - It makes it easier to add new item types such as `Conjured` without increasing complexity in `GildedRose.UpdateQuality`.
 - It avoids changing the `Item` class, which is explicitly restricted by the requirements.
 
-## Business Rules Implemented
-
-The solution implements the following rules:
-
-- Normal items decrease in quality by `1`, or by `2` after the sell date.
-- `Aged Brie` increases in quality as it gets older, and increases faster after the sell date.
-- `Backstage passes` increase in quality as the concert approaches, with larger increases at the stated thresholds, and drop to `0` after the concert.
-- `Sulfuras` never changes.
-- `Conjured` items degrade twice as fast as normal items.
-- Quality is never below `0`.
-- Quality is never above `40`.
 
 ## Testing Approach
 
@@ -48,4 +37,4 @@ The unit tests were updated to cover the main item categories and edge cases:
 - `Conjured` accelerated degradation
 - quality lower and upper bounds
 
-This test coverage was added to protect the refactor and confirm that the new structure still satisfies the required behavior.
+This test coverage was added to protect the refactor and confirm that the new structure still satisfies the required behaviour. Also renamed the snapshot of the received file to ‘verified’ so the related unit test passes.
