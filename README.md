@@ -2,7 +2,7 @@
 
 ## Approach Taken
 
-The solution keeps the requirement shape by leaving `Item` unchanged and by keeping `GildedRose` dependent on `IList<Item>`. This was done to stay close to the original public interface while still improving the maintainability of the update logic.
+The solution keeps the requirement shape by leaving `Item` unchanged and by keeping `GildedRose` dependent on `IList<Item>`. This was done to stay close to the original code while still improving the maintainability of the update logic.
 
 The original `UpdateQuality` method was refactored into smaller updater classes. Each updater class is responsible for one category of item:
 
